@@ -7,9 +7,9 @@ def main():
 
 from datetime import time
 
-hora_inicio = input("Diga o valor da hora de inicio em: HH:MM:SS\n")
+hora_inicio = input("")
 hour, min,second  = [int(i) for i in hora_inicio.split(":")]
-hora_termino = input("Diga o valor da hora de termino em: HH:MM:SS\n")
+hora_termino = input("")
 hour1, min1,second1 = [int(i) for i in hora_termino.split(":")]
 
 min_f = min1 - min
@@ -41,6 +41,8 @@ else:
 
 if hour_f < 0:
   hour_f = 24 + hour_f - i2
+  if hour_f < 10:
+    hour_f = f'0{hour_f - i2}'
 elif hour_f < 10:
   hour_f = f'0{hour_f - i2}'
 else: 
