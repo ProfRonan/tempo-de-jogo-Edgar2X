@@ -39,7 +39,7 @@ elif min_f < 10:
 else:
   min_f = min_f - i
 
-if hour_f < 0:
+if hour_f <= 0:
   hour_f = 24 + hour_f - i2
   if hour_f < 10:
     hour_f = f'0{hour_f - i2}'
